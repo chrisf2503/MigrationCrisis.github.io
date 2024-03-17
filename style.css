@@ -1,0 +1,39 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+  
+body {
+  background-color: indianred;
+}
+h1 {
+  font-family: cursive;
+}
+p{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: medium;
+}
+div {
+  margin: 10px;
+} 
+.head1 {
+  text-align: center;
+}
+.head2{
+  text-align: center;
+}  
+.photo1 {
+  height: 250px;
+  width: 300px;
+}
+  
+#info{
+  color: lightgray;
+}
+#data{
+  list-style:square;
+}
+button:hover,
+button:visited {
+  color: darkolivegreen;
+}
