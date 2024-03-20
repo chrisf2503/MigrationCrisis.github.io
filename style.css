@@ -55,6 +55,7 @@ div {
 /* Style rule set for hovered link */
 .navbar ul li a:hover {
   font-weight: bold;
+  color: blue;
 }
 
 /* Part 2: Flexbox */
