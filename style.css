@@ -14,19 +14,26 @@ p{
   font-size: medium;
 }
 div {
-  margin: 10px;
+  margin: 5px;
+  border: 5px;
 } 
-.head1 {
+.head1{
+  padding: 15px;
+  border-radius: 10%;
+  border-style: dashed;
+  border-color: brown;
   text-align: center;
 }
 .head2{
-  text-align: center;
+  display: flex;
+  justify-content:space-evenly;
+
 }  
 .photo1 {
   height: 250px;
   width: 300px;
 }
-  
+
 #info{
   color: lightgray;
 }
@@ -35,5 +42,10 @@ div {
 }
 button:hover,
 button:visited {
-  color: darkolivegreen;
+  color: red;
+  background-color: aquamarine;
 }
+a:visited{
+  background-color: blueviolet;
+}
+
