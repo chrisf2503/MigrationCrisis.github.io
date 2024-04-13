@@ -138,3 +138,46 @@ button:visited {
   color: red;
   background-color: aquamarine;
 }
+
+/* Add style to button */
+#theme-button {
+  border-radius: 30%;
+  background-color: bisque;
+  border-style: ridge;
+  border-color:cornsilk
+}
+#theme-button:hover{
+  background-color: darkgray;
+  color: white;
+}
+
+/* Customize Dark Mode Theme */
+.dark-mode {
+  background-color: black;
+  color: white;
+  border-color: aqua;
+}
+
+.petition-container{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100;
+  padding-bottom: 50px;
+}
+.petition-para{
+  width: 55%;
+  padding-right: 10px;
+}
+.signatures{
+  width: 45%;
+  padding-right: 10px;
+}
+
+/* Add to CSS file */
+.error {
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+  background:pink;
+}
