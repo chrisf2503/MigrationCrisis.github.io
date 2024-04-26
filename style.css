@@ -181,3 +181,14 @@ button:visited {
   border-color: red;
   background:pink;
 }
+/*unit 8*/
+.revealable{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+.action{
+  transform: translateY(0px);
+  opacity: 1;
+}
