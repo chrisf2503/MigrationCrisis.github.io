@@ -21,11 +21,18 @@ const validateForm = (e) => {
     let containsErrors = false;
   
     var petitionInputs = document.getElementById("sign-petition").elements;
+
+    let person = {
+        name: petitionInputs[0].value,
+        hometown: petitionInputs[1].value,
+        email: petitionInputs[2].value
+
+    }
     // TODO: Loop through all inputs
     for(let i = 0; i < 3; i++){
         if(petitionInputs[i].value.length < 2){
             containsErrors = true;
-            titiopenInputs[i].classList.add('error');
+            petitionInputs[i].classList.add('error');
         }
         else{
             petitionInputs[i].classList.remove('error');    
@@ -38,29 +45,29 @@ const validateForm = (e) => {
   
     // TODO: Call addSignature() and clear fields if no errors
     if(containsErrors == false){
-        addSignature(e);
+        addSignature(person);
+
         for(let i = 0; i < petitionInputs.length; i++){
             petitionInputs[i].value = "";
         }
         containsErrors = false;
+        toggleModal(person);
+
     }
 
-  }
-  sign_button.addEventListener('submit',validateForm);
+}
+sign_button.addEventListener('submit',validateForm);
 
-const addSignature = (e) => {
+const addSignature = (personObj) => {
     // Write your code to manipulate the DOM here
     //part 3
-    e.preventDefault();
 
     const signature = document.querySelector(".signatures");
-    var name = document.getElementById('name');
-    var hometown = document.getElementById('hometown');
     const text = document.createElement('p');
-    text.textContent = '🖊️ ' + name.value + ' from ' + hometown.value + ' supports this';
+    text.textContent = `🖊️ ${personObj.name} from ${personObj.hometown} supports this.`;    
     signature.appendChild(text);
+
     //part 4
-    
     var get_count = document.getElementById('count');
     get_count.remove();
     const new_count = document.createElement('p');
@@ -112,3 +119,24 @@ const reduceMotion = () =>{
 reduceMotionButton.addEventListener("click",reduceMotion)
 window.addEventListener("scroll",reveal)
 
+/*Unit 9*/
+let modal = document.getElementById('thanks-modal')
+let modalContent = document.getElementById('thanks-content-modal')
+let scaleFactor = 1
+let modalImage = document.getElementById('thank-you')
+const toggleModal = (personObj) => { 
+    modal.style.display = "flex";    
+    setTimeout(() => {
+        modal.style.display = "none";
+      }, 4000)
+    modalContent.textContent = `Thank you ${personObj.name} for the support!`; 
+      
+}
+const scaleImage = ()=>{
+    if (scaleFactor === 1) {
+        scaleFactor = 0.8;
+    } else {
+        scaleFactor = 1;
+    }
+    modalImage.style.transform = `scale(${scaleFactor})`;  
+}
